@@ -98,26 +98,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Members\1.jpg" />
-    <Resource Include="Members\10.jpg" />
-    <Resource Include="Members\11.jpg" />
-    <Resource Include="Members\12.jpg" />
-    <Resource Include="Members\13.jpg" />
-    <Resource Include="Members\14.jpg" />
-    <Resource Include="Members\2.jpg" />
-    <Resource Include="Members\3.jpg" />
-    <Resource Include="Members\4.jpg" />
-    <Resource Include="Members\5.jpg" />
-    <Resource Include="Members\6.jpg" />
-    <Resource Include="Members\7.jpg" />
-    <Resource Include="Members\8.jpg" />
-    <Resource Include="Members\9.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="check1.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="duck.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)Members\*.*" "$(TargetDir)\Members" /Y /D /I /E /R
+xcopy "$(ProjectDir)check1.png" "$(TargetDir)" /Y /D</PostBuildEvent>
+  </PropertyGroup>
 </Project>
