@@ -29,16 +29,16 @@
             <Slider Name="personCountInEachGroupSlider" HorizontalAlignment="Left" Margin="460,220,0,0" 
                 VerticalAlignment="Top" IsSnapToTickEnabled="True" Minimum="2"
                 Width="80" Foreground="Orange" ValueChanged="personCountInEachGroupSlider_ValueChanged"/>
-            <TextBlock x:Name="TbMemberCount" HorizontalAlignment="Left" Margin="460,250,0,0" VerticalAlignment="Top"
-               Foreground="Orange" FontWeight="ExtraBold"/>
+            <TextBlock x:Name="TbMemberCount" HorizontalAlignment="Left" Margin="463,254,0,0" VerticalAlignment="Top"
+               Foreground="Orange" FontWeight="ExtraBold" Text="0"/>
             <TextBlock HorizontalAlignment="Left" Margin="492,255,0,0" TextWrapping="Wrap" Text="Member(s) selected" VerticalAlignment="Top" Height="20" Width="200"
                    Foreground="Orange" FontWeight="ExtraBold"/>
             <Label Content="{Binding ElementName=personCountInEachGroupSlider,Path=Value}" HorizontalAlignment="Left" Margin="460,182,0,0" VerticalAlignment="Top"
                Foreground="DarkGray" FontWeight="ExtraBold"/>
             <TextBlock HorizontalAlignment="Left" Margin="492,187,0,0" TextWrapping="Wrap" Text="Member(s) in each Group" VerticalAlignment="Top" Height="20" Width="200"
                    Foreground="DarkGray" FontWeight="ExtraBold"/>
-            <TextBlock x:Name="TbTotalGroup" HorizontalAlignment="Left" Margin="460,270,0,0" VerticalAlignment="Top"
-               Foreground="Orange" FontWeight="ExtraBold"/>
+            <TextBlock x:Name="TbTotalGroup" HorizontalAlignment="Left" Margin="463,274,0,0" VerticalAlignment="Top"
+               Foreground="Orange" FontWeight="ExtraBold" Text="0"/>
             <TextBlock HorizontalAlignment="Left" Margin="492,275,0,0" TextWrapping="Wrap" Text="Group(s) in total" VerticalAlignment="Top" Height="20" Width="111"
                    Foreground="Orange" FontWeight="ExtraBold"/>
             <WrapPanel Name="GroupedResultPanel" HorizontalAlignment="Left" Margin="614,32,30,0" VerticalAlignment="Top"/>

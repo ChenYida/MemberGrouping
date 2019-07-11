@@ -68,7 +68,8 @@ namespace MemberGrouping
             Grid.SetColumn(checkImage, column);
             selectedMembersXY.Add(new Point(row, column));
             TbMemberCount.Text = selectedMembersXY.Count.ToString();
-        }
+			resetGroupCount();
+		}
 
         private void CheckImage_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
@@ -80,7 +81,8 @@ namespace MemberGrouping
             selectedMembersXY.Remove(new Point(row, column));
 
             TbMemberCount.Text = selectedMembersXY.Count.ToString();
-        }
+			resetGroupCount();
+		}
 
         private void ListAllMembersRamdomly()
         {
@@ -210,13 +212,18 @@ namespace MemberGrouping
 
         private void personCountInEachGroupSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            int memberCountInEachGroup = (int)personCountInEachGroupSlider.Value;
-            int groupCount = selectedMembersXY.Count / memberCountInEachGroup
-                + ((selectedMembersXY.Count % memberCountInEachGroup > 0) ? 1 : 0);
-            if (TbTotalGroup != null)
-            {
-                TbTotalGroup.Text = groupCount.ToString();
-            }
-        }
-    }
+			resetGroupCount();
+		}
+
+		private void resetGroupCount()
+		{
+			int memberCountInEachGroup = (int)personCountInEachGroupSlider.Value;
+			int groupCount = selectedMembersXY.Count / memberCountInEachGroup
+				+ ((selectedMembersXY.Count % memberCountInEachGroup > 0) ? 1 : 0);
+			if (TbTotalGroup != null)
+			{
+				TbTotalGroup.Text = groupCount.ToString();
+			}
+		}
+	}
 }
