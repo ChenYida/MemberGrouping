@@ -35,7 +35,7 @@
                    Foreground="Orange" FontWeight="ExtraBold"/>
             <Label Content="{Binding ElementName=personCountInEachGroupSlider,Path=Value}" HorizontalAlignment="Left" Margin="460,182,0,0" VerticalAlignment="Top"
                Foreground="DarkGray" FontWeight="ExtraBold"/>
-            <TextBlock HorizontalAlignment="Left" Margin="492,187,0,0" TextWrapping="Wrap" Text="Member(s) in each Group" VerticalAlignment="Top" Height="20" Width="200"
+            <TextBlock HorizontalAlignment="Left" Margin="492,187,0,0" TextWrapping="Wrap" Text="Member(s) /Group" VerticalAlignment="Top" Height="20" Width="200"
                    Foreground="DarkGray" FontWeight="ExtraBold"/>
             <TextBlock x:Name="TbTotalGroup" HorizontalAlignment="Left" Margin="463,274,0,0" VerticalAlignment="Top"
                Foreground="Orange" FontWeight="ExtraBold" Text="0"/>
